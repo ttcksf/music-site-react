@@ -4,6 +4,23 @@
 @tailwind utilities;
 
 .active {
-  color: #02b875;
-  transition: 0.5s;
+  color: rgb(59 130 246);
+  transition: 0.5s ease-in-out;
+}
+.mainVisual .overlay {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.mainVisual .overlay .hide {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.mainVisual .box .icon:hover .show {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.mainVisual .box .icon:hover .hide,
+.hero .box:hover .overlay {
+  opacity: 1;
 }

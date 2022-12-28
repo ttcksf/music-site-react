@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
-import logo from "../../assets/images/music-logo.png";
-import profile from "../../assets/images/profile-img.jpg";
 import { menuList } from "../../assets/data/Data";
 import { NavLink } from "react-router-dom";
 
@@ -14,14 +12,22 @@ const Header = () => {
       <div className="hidden md:flex justify-between px-7 p-2 items-center">
         <div className="logo flex items-center">
           <div>
-            <img src={logo} alt="logo" width="60px" height="60px" />
+            <img
+              src="./images/music-logo.png"
+              alt="logo"
+              width="60px"
+              height="60px"
+            />
           </div>
           <h2 className="text-2xl font-semibold ml-3 h-8">Lorem</h2>
         </div>
         <div className="menu">
           <ul className="flex">
             {menuList.map((menu, i) => (
-              <li className={`mx-5 py-2 ${activeMenuLink}`} key={i}>
+              <li
+                className={`font-semibold mx-5 py-2 ${activeMenuLink}`}
+                key={i}
+              >
                 <NavLink to={menu.path}>{menu.name}</NavLink>
               </li>
             ))}
@@ -34,7 +40,7 @@ const Header = () => {
           </button>
           <div className="img w-10 h-10 rounded-full">
             <img
-              src={profile}
+              src="./images/profile-img.jpg"
               alt="profile"
               className="img w-10 h-10 bg-red-300 rounded-full object-cover cursor-pointer"
             />
@@ -44,7 +50,12 @@ const Header = () => {
       <div className="flex items-center justify-between md:hidden h-full pl-2 pr-8">
         <div className="logo flex items-center">
           <div>
-            <img src={logo} alt="logo" width="60px" height="60px" />
+            <img
+              src="./images/music-logo.png"
+              alt="logo"
+              width="60px"
+              height="60px"
+            />
           </div>
           <h2 className="text-2xl font-semibold ml-3">Lorem</h2>
         </div>
@@ -54,7 +65,10 @@ const Header = () => {
             <div className="bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-16 left-0 w-full">
               <ul className="flex flex-col">
                 {menuList.map((menu, i) => (
-                  <li className={`mx-5 py-2 ${activeMenuLink}`} key={i}>
+                  <li
+                    className={`font-semibold mx-5 py-2 ${activeMenuLink}`}
+                    key={i}
+                  >
                     <NavLink to={menu.path}>{menu.name}</NavLink>
                   </li>
                 ))}
