@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
 import TopPage from "./pages/TopPage";
+import LayOutMain from "./pages/LayOutMain";
+import Browser from "./pages/Browser";
+import Chart from "./pages/Chart";
+import Artist from "./pages/Artist";
 
 function App() {
   return (
@@ -10,9 +13,33 @@ function App() {
           <Route
             path="/"
             element={
-              <Layout>
+              <LayOutMain>
                 <TopPage />
-              </Layout>
+              </LayOutMain>
+            }
+          />
+          <Route
+            path="/browser"
+            element={
+              <LayOutMain>
+                <Browser />
+              </LayOutMain>
+            }
+          />
+          <Route
+            path="/charts"
+            element={
+              <LayOutMain>
+                <Chart />
+              </LayOutMain>
+            }
+          />
+          <Route
+            path="/artists"
+            element={
+              <LayOutMain>
+                <Artist />
+              </LayOutMain>
             }
           />
         </Routes>
